@@ -8,6 +8,8 @@
 
 #import "MRPAppDelegate.h"
 
+#import "MRPRootViewController.h"
+
 @implementation MRPAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -16,6 +18,9 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[MRPRootViewController alloc] init]];
+    
     return YES;
 }
 
